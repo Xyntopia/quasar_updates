@@ -10,11 +10,12 @@
     "dev": "quasar dev",
     "format": "prettier --write \"**/*.{js,ts,vue,,html,md,json}\" --ignore-path .gitignore",
     "postinstall": "quasar prepare",
-    "lint": "eslint -c ./eslint.config.js './src*/**/*.{ts,js,cjs,mjs,vue}'",
+    "lint": "eslint -c ./eslint.config.js \"./src*/**/*.{ts,js,cjs,mjs,vue}\"",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
     "@quasar/extras": "^1.16.4",
+    "axios": "^1.2.1",
     "pinia": "^3.0.1",
     "quasar": "^2.16.0",
     "vue": "^3.4.18",
