@@ -47,3 +47,4 @@ public/docs/openapi-docs.yml
 cypress.env.json
 
 .corepack
+.yarn
