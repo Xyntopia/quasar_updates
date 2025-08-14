@@ -45,3 +45,5 @@ public/docs/openapi-docs.yml
 
 # this file holds secrets
 cypress.env.json
+
+.corepack
