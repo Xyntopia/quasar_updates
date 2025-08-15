@@ -21,5 +21,14 @@ mv quasar-project/* .
 
 # check git gui for changes and commit!
 
+
+# now, while still in quasar_tracker branch reset to vite branch,
+# so that we can see all the new changes coming in. We have to 
+# decide ourselves now which files to delete and which we stil need
+git reset vite
+
+# also make sure to checkout prettierrc and merge/install package.json in order to make sure
+# we have all the tools available and standarddized
+
 ```
 
