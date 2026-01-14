@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A Quasar Project",
   "productName": "Quasar App",
-  "author": "yeus <Thomas.Meschede@web.de>",
+  "author": "yeus <yeusblender@gmail.com>",
   "type": "module",
   "private": true,
   "scripts": {
@@ -15,34 +15,34 @@
     "postinstall": "quasar prepare"
   },
   "dependencies": {
-    "axios": "^1.2.1",
     "vue-i18n": "^11.0.0",
     "pinia": "^3.0.1",
     "@quasar/extras": "^1.16.4",
     "quasar": "^2.16.0",
-    "vue": "^3.4.18",
+    "vue": "^3.5.22",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
     "@eslint/js": "^9.14.0",
     "eslint": "^9.14.0",
-    "eslint-plugin-vue": "^9.30.0",
-    "globals": "^15.12.0",
-    "vue-tsc": "^2.0.29",
+    "eslint-plugin-vue": "^10.4.0",
+    "globals": "^16.4.0",
+    "vue-tsc": "^3.0.7",
     "@vue/eslint-config-typescript": "^14.4.0",
-    "vite-plugin-checker": "^0.9.0",
+    "vite-plugin-checker": "^0.11.0",
+    "vue-eslint-parser": "^10.2.0",
     "@vue/eslint-config-prettier": "^10.1.0",
     "prettier": "^3.3.3",
     "@types/node": "^20.5.9",
     "@intlify/unplugin-vue-i18n": "^4.0.0",
     "@quasar/app-vite": "^2.1.0",
     "autoprefixer": "^10.4.2",
-    "typescript": "~5.5.3"
+    "typescript": "^5.9.2"
   },
   "engines": {
-    "node": "^28 || ^26 || ^24 || ^22 || ^20 || ^18",
+    "node": "^28 || ^26 || ^24 || ^22 || ^20",
     "npm": ">= 6.13.4",
     "yarn": ">= 1.21.1"
   },
-  "packageManager": "pnpm@10.14.0+sha512.ad27a79641b49c3e481a16a805baa71817a04bbe06a38d17e60e2eaee83f6a146c6a688125f5792e48dd5ba30e7da52a5cda4c3992b9ccf333f9ce223af84748"
+  "packageManager": "pnpm@10.28.0+sha512.05df71d1421f21399e053fde567cea34d446fa02c76571441bfc1c7956e98e363088982d940465fd34480d4d90a0668bc12362f8aa88000a64e83d0b0e47be48"
 }
