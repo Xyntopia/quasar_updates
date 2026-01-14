@@ -62,11 +62,12 @@
           #mesa
           #libdrm
           cargo-tauri
-          # rustup
+          rustup # needed for adding new targets e.g. wasm-bindgen!
+          wasm-pack # we can use this to package rust code for webassembly
           # add rust toolchain
           rustc
+          rustfmt # needed in order to compile rumoca
           cargo
-
 
           # for cypress e2e testing
           glib
@@ -90,7 +91,7 @@
           xorg.libxcb
           libxkbcommon
           #xorg
-          mesa 
+          mesa
           libgbm # for libgbm
           expat
         ];
@@ -157,7 +158,7 @@
           # and thats why we're commenting it out...
           #PKG_CONFIG_PATH = "${glib.dev}/lib/pkgconfig:${libsoup_3.dev}/lib/pkgconfig:${webkitgtk_4_1.dev}/lib/pkgconfig:${at-spi2-atk.dev}/lib/pkgconfig:${gtk3.dev}/lib/pkgconfig:${gdk-pixbuf.dev}/lib/pkgconfig:${cairo.dev}/lib/pkgconfig:${pango.dev}/lib/pkgconfig:${harfbuzz.dev}/lib/pkgconfig";
           # propagatedBuildInputs = libraries;  # your GTK/WebKit/etc libs
-          
+
           shellHook = ''
             # python poetry related stuff
             unset SOURCE_DATE_EPOCH
@@ -180,7 +181,7 @@
               set +a
             fi
 
-            export PATH="$(pwd)/node_modules/.bin:$PATH"
+            export PATH="$(pwd)/node_modules/.bin:$PATH:$HOME/.cargo/bin"
 
             export LD_LIBRARY_PATH=${
               pkgs.lib.makeLibraryPath libraries
@@ -204,9 +205,9 @@
             #      We still keep shims (yarn, pnpm, etc.) in ./.corepack/bin so they are project-local.
             #
             # Nix note: use ''${...} to pass Bash \$\{...} through without Nix interpolating it.
-
             ###  ability to use modern yarn
-            # keep shims project-local, move downloads to home cache (avoid Nix \$\{\} interpolation)
+            # Put shims & downloaded package managers inside repo
+            # this helps with our new yarn version using corepack on nixos!
             export COREPACK_HOME="''${XDG_CACHE_HOME:-$HOME/.cache}/corepack-home"
             export PATH="$(pwd)/.corepack/bin:$PATH"
 
